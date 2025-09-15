@@ -13,7 +13,7 @@ const menuItems = [
 const SidebarItem = memo(({ id, label, icon: Icon, active, open, onClick }) => (
   <button
     onClick={() => onClick(id)}
-    className={`flex items-center w-full px-3 py-2 rounded-lg transition ${
+    className={`flex items-center w-full px-3 py-2 rounded-lg transition cursor-pointer ${
       active === id
         ? "bg-red-400 text-white"
         : "text-gray-700 hover:bg-gray-200"
@@ -79,7 +79,6 @@ export default function Dashboard() {
         <nav className="flex-1 p-2 space-y-2">
           {menuItems.map((item) => (
             <SidebarItem
-              className="cursor-pointer"
               key={item.id}
               {...item}
               active={active}
