@@ -7,10 +7,13 @@ export const Button = (props) => {
       <button
         onClick={onClick}
         onChange={onChange}
-        className={`${className} bg-[#009999] cursor-pointer text-white py-2 px-4 rounded-lg hover:bg-red-300`}
+        className={`${className} bg-red-400 cursor-pointer text-white py-2 px-4 rounded-lg hover:bg-red-300`}
       >
         {label}
       </button>
     </>
   );
 };
+
+
+//#009999
