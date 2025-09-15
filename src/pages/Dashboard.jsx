@@ -15,7 +15,7 @@ const SidebarItem = memo(({ id, label, icon: Icon, active, open, onClick }) => (
     onClick={() => onClick(id)}
     className={`flex items-center w-full px-3 py-2 rounded-lg transition cursor-pointer ${
       active === id
-        ? "bg-red-400 text-white"
+        ? "bg-[#009999] text-white"
         : "text-gray-700 hover:bg-gray-200"
     }`}
   >
