@@ -68,10 +68,10 @@ export default function Dashboard() {
         } bg-white shadow-lg flex flex-col transition-all duration-300`}
       >
         <div className="flex items-center justify-between p-4 border-b">
-          <h1 className={`text-xl font-bold text-blue-600 ${!open && "hidden"}`}>
+          <h1 className={`text-xl font-bold text-red-400 ${!open && "hidden"}`}>
             Employee
           </h1>
-          <button onClick={() => setOpen(!open)}>
+          <button className="cursor-pointer" onClick={() => setOpen(!open)}>
             <FaBars />
           </button>
         </div>
@@ -79,6 +79,7 @@ export default function Dashboard() {
         <nav className="flex-1 p-2 space-y-2">
           {menuItems.map((item) => (
             <SidebarItem
+              className="cursor-pointer"
               key={item.id}
               {...item}
               active={active}
