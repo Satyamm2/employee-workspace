@@ -1,6 +1,6 @@
 import { useState, memo } from "react";
 import { FaClock, FaUmbrellaBeach, FaWallet, FaBars } from "react-icons/fa";
-import { Button } from "../../../employee-management/src/components/Button";
+import { Button } from "../components/Button";
 
 // Sidebar config
 const menuItems = [
