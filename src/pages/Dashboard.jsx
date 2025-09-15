@@ -69,7 +69,7 @@ export default function Dashboard() {
       >
         <div className="flex items-center justify-between p-4 border-b">
           <h1 className={`text-xl font-bold text-red-400 ${!open && "hidden"}`}>
-            Employee
+            Workspace
           </h1>
           <button className="cursor-pointer" onClick={() => setOpen(!open)}>
             <FaBars />
