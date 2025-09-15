@@ -1,6 +1,9 @@
 import { useState, memo } from "react";
 import { FaClock, FaUmbrellaBeach, FaWallet, FaBars } from "react-icons/fa";
-import { Button } from "../components/Button";
+import { Button } from "./Button";
+import Shift from "./Shift";
+import Leave from "./Leave";
+import Salary from "./Salary";
 
 // Sidebar config
 const menuItems = [
@@ -32,28 +35,11 @@ export default function Dashboard() {
   const renderContent = () => {
     switch (active) {
       case "shift":
-        return (
-          <div className="p-6 bg-white rounded-2xl shadow-md">
-            <h2 className="text-2xl font-semibold mb-4">Start Shift</h2>
-            <Button 
-            label = "Start Now"
-            />
-          </div>
-        );
+        return <Shift />;
       case "leaves":
-        return (
-          <div className="p-6 bg-white rounded-2xl shadow-md">
-            <h2 className="text-2xl font-semibold mb-4">Leaves</h2>
-            <p className="text-gray-600">You have 5 leaves remaining.</p>
-          </div>
-        );
+        return <Leave />;
       case "salary":
-        return (
-          <div className="p-6 bg-white rounded-2xl shadow-md">
-            <h2 className="text-2xl font-semibold mb-4">Salary</h2>
-            <p className="text-gray-600">Your last credited salary: ₹50,000</p>
-          </div>
-        );
+        return <Salary />;
       default:
         return null;
     }
@@ -67,7 +53,7 @@ export default function Dashboard() {
           open ? "w-64" : "w-20"
         } bg-white shadow-lg flex flex-col transition-all duration-300`}
       >
-        <div className="flex items-center justify-between p-4 border-b">
+        <div className="flex items-center justify-between p-4 border-b border-gray-300">
           <h1 className={`text-xl font-bold text-red-400 ${!open && "hidden"}`}>
             Workspace
           </h1>
